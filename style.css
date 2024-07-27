@@ -409,6 +409,11 @@ li{
 	justify-content: center;
 }
 
+.projects-icons-link img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
 .color-h2-span{
 	color: var(--orange-color);
 }
