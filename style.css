@@ -1,3 +1,10 @@
+:root{
+	--white-color: #ffffff;
+	--orange-color: #FFC924;
+	--black-color: #000000;
+	--gray-color: #333;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 *{
 	padding: 0;
@@ -12,7 +19,7 @@ html {
 }
 a {
 	text-decoration: none;
-	color: white;
+	color: var(--white-color);
 }
 .container {
 	min-height: 100vh;
@@ -27,7 +34,7 @@ img {
 	object-fit: cover;
 }
 p {
-	color: black;
+	color: var(--black-color);
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -37,23 +44,23 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
+	color: var(--black-color);
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
 .section-title span {
-	color: #FFC924;
+	color: var(--orange-color);
 }
 
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
-	color: white;
+	color: var(--white-color);
 	margin: 10px;
 	background-color: transparent;
-	border: 2px solid #FFC924;
+	border: 2px solid var(--orange-color);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -62,16 +69,16 @@ p {
 	transition-property: background-color, color;
 }
 .cta:hover {
-	color: white;
-	background-color: #FFC924;
+	color: var(--white-color);
+	background-color: var(--orange-color);
 }
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
+	color: var(--white-color);
 }
 .brand h1 span {
-	color: #FFC924;
+	color: var(--orange-color);
 }
 
 /* Header section */
@@ -121,7 +128,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
-	color: white;
+	color: var(--white-color);
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
@@ -143,7 +150,7 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: #FFC924;
+	color: var(--orange-color);
 }
 li{
 	font-size: 14px;
@@ -152,7 +159,7 @@ li{
 	height: 60px;
 	width: 60px;
 	display: inline-block;
-	border: 3px solid white;
+	border: 3px solid var(--white-color);
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -169,14 +176,14 @@ li{
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid var(--white-color);
 	animation: hamburger_puls 1s ease infinite;
 }
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	background-color: white;
+	background-color: var(--white-color);
 	z-index: -1;
 }
 #header .hamburger .bar::after,
@@ -186,7 +193,7 @@ li{
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: white;
+	background-color: var(--white-color);
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
@@ -219,7 +226,7 @@ li{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: black;
+	background-color: var(--black-color);
 	opacity: 0.7;
 	z-index: -1;
 }
@@ -254,7 +261,7 @@ li{
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: #FFC924;
+	background-color: var(--orange-color);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -306,7 +313,7 @@ li{
 	justify-content: center;
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #000000 0%, #171a1c 90%);
-	color: white;
+	color: var(--white-color);
 }
 #portfolio .portfolio-info h1 {
 	font-size: 4rem;
@@ -318,7 +325,7 @@ li{
 	margin-top: 10px;
 }
 #portfolio .portfolio-info p {
-	color: white;
+	color: var(--white-color);
 }
 #portfolio .portfolio-img {
 	flex-basis: 50%;
@@ -369,7 +376,7 @@ li{
 	margin-bottom: 20px;
 }
 #about .col-right .cta {
-	color: black;
+	color: var(--black-color);
 	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
@@ -378,7 +385,7 @@ li{
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 10px solid white;
+	border: 10px solid var(--white-color);
 }
 #about .col-left .about-img::after {
 	content: '';
@@ -387,9 +394,36 @@ li{
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid #FFC924;
+	border: 7px solid var(--orange-color);
 	z-index: -1;
 }
+
+#about li{
+	font-size: 16px;
+	list-style-image: url("./img/arrow.png");
+}
+
+.projects-icons-link{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.color-h2-span{
+	color: var(--orange-color);
+}
+
+.portfolio-links-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.portfolio-links-section h1{
+	font-size: 3rem;
+	text-align: center;
+}
+
 /* End About Section */
 
 /* contact Section */
@@ -448,7 +482,7 @@ li{
 	padding-bottom: 10px;
 }
 #footer h2 {
-	color: white;
+	color: var(--white-color);
 	font-weight: 500;
 	font-size: 1.8rem;
 	letter-spacing: 0.1rem;
@@ -472,7 +506,7 @@ li{
 	filter: grayscale(0);
 }
 #footer p {
-	color: white;
+	color: var(--white-color);
 	font-size: 1.3rem;
 }
 /* End Footer */
@@ -500,12 +534,12 @@ li{
 }
 @keyframes text_reveal {
 	100% {
-		color: white;
+		color: var(--white-color);
 	}
 }
 @keyframes text_reveal_name {
 	100% {
-		color: #FFC924;
+		color: var(--orange-color);
 		font-weight: 500;
 	}
 }
@@ -553,6 +587,8 @@ li{
 	#portfolio .all-portfolio .portfolio-img {
 		height: 100%;
 	}
+
+
 	/* End portfolio */
 
 	/* About */
@@ -569,7 +605,7 @@ li{
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid #FFC924;
+		border: 10px solid var(--orange-color);
 	}
 	#about .col-right {
 		text-align: left;
@@ -676,11 +712,11 @@ li{
 	font-size: 26px;
 	width: 50px;
 	height: 50px;
-	background-color: #fff;
-	color: #333;
+	background-color: var(--white-color);
+	color: var(--gray-color);
 	cursor: pointer;
 	outline: none;
-	border: 3px solid #333;
+	border: 3px solid var(--gray-color);
 	border-radius: 50%;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
@@ -688,8 +724,8 @@ li{
 	z-index: 1;
   }
   #back-to-top-btn:hover, #back-to-top-btn:focus {
-	background-color: #333;
-	color: #fff;  
+	background-color: var(--gray-color);
+	color: var(--white-color);  
   }
   
   @media(max-width: 992px) {
